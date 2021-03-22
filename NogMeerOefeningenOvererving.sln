@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NogMeerOefeningenOvererving", "NogMeerOefeningenOvererving\NogMeerOefeningenOvererving.csproj", "{D56CEC3D-E837-400F-931F-CF27DD667774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NogEenBank", "NogEenBank\NogEenBank.csproj", "{9D9C19EA-4590-423E-B1BF-E33147086E3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricFigures", "GeometricFigures\GeometricFigures.csproj", "{BBC31859-7A66-4C9F-8534-69CE2588726E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dierentuin", "Dierentuin\Dierentuin.csproj", "{6284BD20-FEF7-407E-9694-DC1868781E3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D56CEC3D-E837-400F-931F-CF27DD667774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D56CEC3D-E837-400F-931F-CF27DD667774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D56CEC3D-E837-400F-931F-CF27DD667774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D56CEC3D-E837-400F-931F-CF27DD667774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9C19EA-4590-423E-B1BF-E33147086E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9C19EA-4590-423E-B1BF-E33147086E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9C19EA-4590-423E-B1BF-E33147086E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9C19EA-4590-423E-B1BF-E33147086E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC31859-7A66-4C9F-8534-69CE2588726E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC31859-7A66-4C9F-8534-69CE2588726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC31859-7A66-4C9F-8534-69CE2588726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC31859-7A66-4C9F-8534-69CE2588726E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6284BD20-FEF7-407E-9694-DC1868781E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6284BD20-FEF7-407E-9694-DC1868781E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6284BD20-FEF7-407E-9694-DC1868781E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6284BD20-FEF7-407E-9694-DC1868781E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68110836-20B6-4EA3-851A-F3A4CD7F4872}
+	EndGlobalSection
+EndGlobal

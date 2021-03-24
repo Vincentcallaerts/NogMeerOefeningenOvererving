@@ -54,7 +54,7 @@ namespace Dierentuin
                     }
 
                 }
-                switch (SelectMenu("Welkom Bij de Dierentuin","Verwijder dier", "Gemiddelde gewicht dieren", "Dieren Praten", "Nieuwe Dierentuin"))
+                switch (SelectMenu("Welkom Bij de Dierentuin","Verwijder dier", "Gemiddelde gewicht dieren", "Dieren Praten", "FilterPraten", "Nieuwe Dierentuin"))
                 {
 
                     case 0:
@@ -68,6 +68,10 @@ namespace Dierentuin
                         break;
                     case 2:
                         dierenTuin.Zegt();
+                        Console.ReadKey();
+                        break;
+                    case 3:
+                        dierenTuin.FilterPraat(SelectMenuDier("Welk Dier wilt uw horen", diertjes));
                         Console.ReadKey();
                         break;
                     default:
@@ -182,6 +186,63 @@ namespace Dierentuin
             Console.CursorVisible = true;
 
             return selection - 1;
+        }
+        static Dier SelectMenuDier(string message, List<Dier> diertjes)
+        {
+            Console.SetCursorPosition(0, 0);
+            Console.CursorVisible = false;
+            Console.Clear();
+
+            int selection = 1;
+            bool selected = false;
+            ConsoleColor selectionForeground = Console.BackgroundColor;
+            ConsoleColor selectionBackground = Console.ForegroundColor;
+
+            while (!selected)
+            {
+                Console.SetCursorPosition((Console.WindowWidth - message.Length) / 2, Console.CursorTop);
+                Console.WriteLine(message);
+                for (int i = 0; i < diertjes.Count; i++)
+                {
+                    if (selection == i + 1)
+                    {
+                        Console.ForegroundColor = selectionForeground;
+                        Console.BackgroundColor = selectionBackground;
+                    }
+                    Console.SetCursorPosition((Console.WindowWidth - diertjes[i].Naam.Length - 3) / 2, Console.CursorTop);
+                    Console.WriteLine((i + 1 + ": " + diertjes[i].Naam));
+                    Console.ResetColor();
+                }
+                if (selection == 4)
+                {
+                    Console.ForegroundColor = selectionForeground;
+                    Console.BackgroundColor = selectionBackground;
+                }
+                Console.SetCursorPosition((Console.WindowWidth - 14) / 2, Console.CursorTop);
+                Console.WriteLine((4 + ": Stop ingeven"));
+                Console.ResetColor();
+
+                switch (Console.ReadKey(true).Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        selection--;
+                        break;
+                    case ConsoleKey.DownArrow:
+                        selection++;
+                        break;
+                    case ConsoleKey.Enter:
+                        selected = true;
+                        break;
+                }
+
+                selection = Math.Min(Math.Max(selection, 1), diertjes.Count + 1);
+                Console.SetCursorPosition(0, 0);
+            }
+
+            Console.Clear();
+            Console.CursorVisible = true;
+
+            return diertjes[selection - 1];
         }
     }
 }

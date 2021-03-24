@@ -37,6 +37,39 @@ namespace Dierentuin
             }
             Console.WriteLine(Math.Round(temp/diertjes.Count));
         }
+        public void FilterPraat(Object obj)
+        {
+            if (obj is Schildpad)
+            {
+                for (int i = 0; i < diertjes.Count; i++)
+                {
+                    if (diertjes[i] is Schildpad)
+                    {
+                        diertjes[i].Zegt();
+                    }
+                }
+            }
+            else if (obj is Ooievaar)
+            {
+                for (int i = 0; i < diertjes.Count; i++)
+                {
+                    if (diertjes[i] is Ooievaar)
+                    {
+                        diertjes[i].Zegt();
+                    }
+                }
+            }
+            else if(obj is Octopus)
+            {
+                for (int i = 0; i < diertjes.Count; i++)
+                {
+                    if (diertjes[i] is Octopus)
+                    {
+                        diertjes[i].Zegt();
+                    }
+                }
+            }
+        }
 
     }
 }

@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace GeometricFigures
 {
-    class Rechthoek : GeometricFigure
+    class Rechthoek : GeometricFigure, IComparable
     {
         public override int BerekenOppervlakte()
         {
 
             return Breedte * Hoogte;
+        }
+
+        public int CompareTo(object obj)
+        {
+            Rechthoek temp = obj as Rechthoek;
+            if (temp != null)
+            {
+                return Oppervlakte.CompareTo(temp.Oppervlakte);
+            }
+            return 0;
         }
     }
 }
